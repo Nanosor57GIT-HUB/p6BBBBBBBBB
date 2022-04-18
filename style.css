@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/**********************************************/
+
+:root {
+  /* PRIMAIRE */
+  --clr-primary-1: #901c1c;
+  --clr-primary-2: #d3573c;
+  --black: #000000;
+  --white: #ffffff;
+  --lightGrey: #757575;
+
+  /* SECONDAIRE */
+  --clr-secondary-1: #525252;
+  --clr-secondary-2: #fafafa;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+}
+
+main {
+  margin: 20px 0;
+  padding-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+/*HEADER*/
+
+#content_btn {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -230px;
+  background-color: #db8876;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  z-index: 10000;
+}
+
+.header {
+  display: flex;
+  width: 92%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin-top: 40px;
+}
+
+/* ///////////////////////////////// */
+/* ///// ProfilsPhotographers ////// */
+
+.photographer_section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 400px;
+  height: auto;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.imageProfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0px rgba(134, 134, 134, 0.5);
+}
+
+article a:hover {
+  transform: scale(1.005);
+}
+
+.photographer-name-profil {
+  color: var(--clr-primary-2);
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.profilInfos {
+  text-align: center;
+}
+
+.price-card {
+  color: var(--lightGrey);
+}
+
+/* //// End ProfilsPhotographers//// */
+/* ///////////////////////////////// */
+
+/* //////// LogoMediasPage //////// */
+
+.logoMediaFishEye {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5%;
+  margin-top: 40px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* ///////////////////////////////// */
+/* ///////// ProfilsMedias ///////// */
+
+.photograph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 290px;
+  margin: 40px auto;
+  background-color: var(--clr-secondary-2);
+}
+
+.card2-bio {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin-left: 30px;
+}
+
+.infos-photographer-media {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.photographer-name {
+  font-size: 3rem;
+  color: var(--clr-primary-2);
+  margin: 0;
+}
+
+.location {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.portrait-container {
+  width: 290px;
+  height: 100%;
+}
+
+.portraitMedia {
+  display: flex;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 30px auto;
+  vertical-align: middle;
+  width: 80%;
+  height: 80%;
+}
+
+.container-contact {
+  width: 30%;
+}
+
+.contact_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-primary-1);
+  color: var(--clr-secondary-2);
+  width: 70%;
+  height: 55px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact_button:hover {
+  transform: scale(1.03);
+  background: var(--clr-primary-2);
+}
+
+.contact_button:focus {
+  background: var(--clr-primary-2);
+}
+
+/* /////// End ProfilsMedia///////// */
+/* ///////////////////////////////// */
+
+/* ///////////////////////////////// */
+/* ///////// ContactForm /////////// */
+
+.modal-form {
+  display: none;
+}
+
+.windowContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 990;
+}
+
+.modalContact {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90%;
+  border-radius: 1%;
+  background-color: var(--clr-primary-2);
+}
+
+.closedContact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formClose {
+  position: fixed;
+  border: none;
+  font-size: 3rem;
+  height: 60px;
+  margin-right: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  color: var(--clr-secondary-2);
+  background-color: #11ffee00;
+}
+
+.photographersContactName p,
+h3 {
+  font-size: 3rem;
+  width: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+.photographersContactName {
+  margin-left: 20px;
+}
+
+.formClass {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divInputs {
+  margin: 0 auto;
+  width: 95%;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  font-size: 1.1rem;
+  width: 100%;
+  height: 40px;
+}
+
+textarea {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.submitForm-btn {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.btn-Envoyer {
+  background: var(--clr-primary-1);
+  color: var(--clr-secondary-2);
+  border: none;
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* /////// End ContactForm ///////// */
+/* ///////////////////////////////// */
+
+/* ///////////////////////////////// */
+/* ///////// LikesByCard /////////// */
+
+.media-card-text {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.media-card-title {
+  width: 83%;
+}
+
+.likesByMedia {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 17%;
+}
+
+#media-card-likes {
+  display: flex;
+  width: 90%;
+  height: 25px;
+  border: none;
+}
+
+.infos-Likes-Icon1,
+.infos-Likes-Icon2 {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 40px;
+  display: flex;
+  font-size: 1.2rem;
+  color: var(--clr-primary-1);
+  cursor: pointer;
+}
+
+.infos-Likes-Icon2 {
+  display: none;
+}
+
+/* ///////////////////////////////// */
+/* ////// End LikesByCard ////////// */
+
+/* ///////////////////////////////// */
+/* ///////// LikesBox ////////////// */
+
+.likesBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.boxLikes {
+  display: flex;
+  width: 320px;
+  background-color: #db8876;
+  border-radius: 3px;
+  z-index: 280;
+}
+
+.mediaLikesBox {
+  display: flex;
+  width: 40%;
+  height: auto;
+  align-items: center;
+  margin: 10px 0 0 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.numberLikesBox {
+  width: 40%;
+}
+
+.heart-box {
+  width: 50%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.likeInfosMedia {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 20px 0 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 50%;
+  height: auto;
+}
+
+.fas,
+.heart-box .infos-Likes-Icon2 {
+  color: var(--clr-primary-1);
+}
+
+/* //////////////////////////////// */
+/* ///////// End LikesBox ///////// */
+
+/* //////////////////////////////// */
+/* /////////// Cards ////////////// */
+
+.portfolio-section {
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(auto-fill, 400px);
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.portfolio-section article {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.media-card video,
+.media-card img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.media-card-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.media-card-likes,
+.media-card-title {
+  color: var(--clr-primary-1);
+}
+
+.media-card-likes {
+  cursor: pointer;
+}
+
+/* ///////// End of Cards //////////// */
+/* /////////////////////////////////// */
+
+/* /////////////////////////////////// */
+/* //////////// Slider /////////////// */
+
+.slider-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 300;
+}
+
+.slider-container {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* overflow: hidden;*/
+  width: 80%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.arrow-left-container,
+.arrow-right-container {
+  display: flex;
+  width: 7vw;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-left,
+.arrow-right {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-left: solid 4px var(--clr-primary-1);
+  border-bottom: solid 4px var(--clr-primary-1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.arrow-left {
+  transform: rotateZ(45deg);
+}
+
+.arrow-right {
+  transform: rotateZ(225deg);
+}
+
+.slider-media-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: fixed;
+  top: 60px;
+  display: flex;
+  width: 65%;
+  height: 640px;
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-media-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: auto;
+  height: 640px;
+  top: 0;
+}
+
+.slide-media-container img,
+.slide-media-container video {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 97%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 rgba(0, 0, 0, 0.19);
+}
+
+.media-slide-title {
+  color: var(--clr-primary-1);
+  display: flex;
+  margin-top: 10px;
+}
+
+.close-lightbox {
+  color: var(--clr-primary-1);
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 50px;
+  line-height: 20px;
+  height: 50px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.arrow-left:hover,
+.arrow-right:hover,
+.close-lightbox:hover {
+  opacity: 1;
+}
+
+/* //////// End of Slider /////////// */
+/* ////////////////////////////////// */
+
+/* //////// Select Button /////////// */
+/* ////////////////////////////////// */
+
+.sort-title {
+  display: flex;
+  width: 110px;
+  height: 60px;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+#sort-wrapper {
+  position: relative;
+  
+  width: 170px;
+  height: 180px;
+}
+
+.works-sort {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.sort-base {
+  position: relative;
+  padding: 0;
+  width: 170px;
+  background-color: #911c1c;
+  border-radius: 7px;
+}
+
+.select-option {
+  display: flex;
+  margin: 0 0 0 10px;
+  width: 155px;
+  height: 60px;
+  border: none;
+  background: #911c1c;
+  font-size: 1.3rem;
+  color: #ffffff;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fa-chevron-up {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 34%;
+  right: 15px;
+  background-color: #901c1c;
+  color: #fafafa;
+  z-index: 20;
+}
+
+.arrow-down-open {
+  transform: rotate(180deg);
+}
+.popularité,
+.date,
+.titre {
+  border-top: 2px solid #ffffff;
+}
+#select-block-options {
+  display: none;
+  width: 170px;
+  position: absolute;
+  background-color: #911c1c;
+  border-radius: 0 0 7px 7px;
+  z-index: 2000;
+}
+
+/* ///////// End of Select Button ////////// */
+/* ///////////////////////////////////////// */
+
