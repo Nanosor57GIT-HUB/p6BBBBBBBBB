@@ -93,7 +93,8 @@ async function init() {
   displayMedia(triPopularite, photographer);
 
   displayPhotographerInfo(photographer);
-  handleButtonsOptions(button);
+
+  handleButtonsOptions();
 
   sortData(portfolio, photographer, totalLikes, dayPrice);
 

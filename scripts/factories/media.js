@@ -1,7 +1,7 @@
 class VideoMediaSubFactory {
-  static render(video) {
+  static render(video, type) {
     return `
-    <video controls  preload="metadata" class="media-card-img lb-target">
+    <video controls  preload="metadata" class="media-${type}-img lb-target">
                 <source  src="assets/videos/${video}" type="video/mp4">
               </video>       
         </div> `;
@@ -60,7 +60,7 @@ function mediaFactory(data, photographer) {
       ${
         image
           ? ImageMediaSubFactory.render(image, title, "slide", name)
-          : VideoMediaSubFactory.render(video, "400", "300", name, title)
+          : VideoMediaSubFactory.render(video, "slide", "300", name, title)
       } 
 
         
