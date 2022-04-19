@@ -33,7 +33,7 @@ body {
 
 main {
   margin: 20px 0;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 a {
@@ -133,6 +133,8 @@ article a:hover {
   height: 50px;
   cursor: pointer;
 }
+
+/* //////////////////////////////// */
 
 /* ///////////////////////////////// */
 /* ///////// ProfilsMedias ///////// */
@@ -240,7 +242,7 @@ article a:hover {
 .modalContact {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   height: 90%;
   border-radius: 1%;
   background-color: var(--clr-primary-2);
@@ -257,7 +259,7 @@ article a:hover {
   font-size: 3rem;
   height: 60px;
   margin-right: 15px;
-  margin-top: 15px;
+  margin-top: 10px;
   cursor: pointer;
   color: var(--clr-secondary-2);
   background-color: #11ffee00;
@@ -365,8 +367,8 @@ textarea {
   display: none;
 }
 
-/* ///////////////////////////////// */
 /* ////// End LikesByCard ////////// */
+/* ///////////////////////////////// */
 
 /* ///////////////////////////////// */
 /* ///////// LikesBox ////////////// */
@@ -421,8 +423,8 @@ textarea {
   color: var(--clr-primary-1);
 }
 
-/* //////////////////////////////// */
 /* ///////// End LikesBox ///////// */
+/* //////////////////////////////// */
 
 /* //////////////////////////////// */
 /* /////////// Cards ////////////// */
@@ -570,11 +572,13 @@ textarea {
 }
 
 .close-lightbox {
-  color: var(--clr-primary-1);
+  display: flex;
   position: absolute;
+  color: var(--clr-primary-1);
   top: 0px;
-  right: 20px;
-  font-size: 50px;
+  top: 20px;
+  font-size: 40px;
+  font-weight: bold;
   line-height: 20px;
   height: 50px;
   opacity: 0.6;
@@ -590,8 +594,8 @@ textarea {
 /* //////// End of Slider /////////// */
 /* ////////////////////////////////// */
 
-/* //////// Select Button /////////// */
 /* ////////////////////////////////// */
+/* //////// Select Button /////////// */
 
 .sort-title {
   display: flex;
@@ -604,7 +608,7 @@ textarea {
 
 #sort-wrapper {
   position: relative;
-  
+
   width: 170px;
   height: 180px;
 }
@@ -668,4 +672,3 @@ textarea {
 
 /* ///////// End of Select Button ////////// */
 /* ///////////////////////////////////////// */
-

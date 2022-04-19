@@ -11,7 +11,7 @@ class VideoMediaSubFactory {
 class ImageMediaSubFactory {
   static render(image, title, type, name) {
     return `   
-     <img class="media-${type}-img lb-target" src="assets/Photos/${name}/${image}" alt="${title}">      
+     <img class="media-${type}-img lb-target" src="assets/Photos/${name}/${image}" alt="intitulé de la photo: ${title}">      
         </div> `;
   }
 }
@@ -35,8 +35,8 @@ function mediaFactory(data, photographer) {
       <div class="media-card-text">
           <span class="media-card-title">${title}</span>
           <div class="likesByMedia">
-          <i class="fas fa-heart  infos-Likes-Icon2"></i>
-          <i class="far fa-heart  infos-Likes-Icon1"></i>    
+          <i class="fas fa-heart  infos-Likes-Icon2" ></i>
+          <i class="far fa-heart  infos-Likes-Icon1" alt="Cliquer pour liker"></i>    
            <p id="media-card-likes">${likes}</p>  
           </div>
         </div>

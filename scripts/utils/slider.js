@@ -3,15 +3,16 @@ const sliderContainer = document.querySelector(".slider-modal");
 sliderContainer.innerHTML = `
  <div class="slider-container">
    <div class="arrow-left-container">
-     <div class="arrow-left"></div>
+     <div class="arrow-left" aria-label="cliquer pour voir l'image précédente"></div>
    </div>
 
    <div class="slider-media-container"></div>
    
-   <div class="arrow-right-container">
+   <div class="arrow-right-container" aria-label="cliquer pour voir l'image suivante">
      <div class="arrow-right"></div>
+     <div class="close-lightbox" aria-label="cliquer pour fermer">X</div>
    </div>
-   <div class="close-lightbox">x</div>
+   
  </div>`;
 
 
@@ -70,6 +71,7 @@ const enableLightboxListeners = (portfolio) => {
       });
       // console.log(nextBtn); //positionne le next sur l'index clicked(asc order 1...9-0)
 
+      //Next/Previous arrow at click
       window.addEventListener("keydown", checkKeyPress, false);
       function checkKeyPress(e, index) {
         if (e.keyCode == "37") {
@@ -80,71 +82,24 @@ const enableLightboxListeners = (portfolio) => {
           console.log(window);
         }
       }
+
     })
   );
   /*/////////////////////////////////////////////////////////////*/
-  //open lightbox at clic
+  //open lightbox at click
   window.addEventListener("keydown", checkKeyPress, false);
   function checkKeyPress(e, index) {
     if (e.keyCode == "13") {
-       console.log(slides[0]);
-       console.log(slidesIds[0])
-       const test = slidesIds[1]
-     //  console.log(showSlide());
-
       sliderContainer.style.display = "block";
-    }
+    } 
         if (e.keyCode == "27") {
       sliderContainer.style.display = "none";
     } else {
       return
     }
   }
- //console.log(slidesIds[0]);
-  //ouvrir le media à l'index 1
-
-
-  // document.addEventListener("keydown",
-  // function checkKeyPress(e) {
-
-      
-
-   
-
-  //   console.log(e.target.parentElement);
-    // Get current index of clicked media
-    //Récupérer l'index du media cliquer
+ 
   
-    
-
-  
-    // if (e.keyCode == "13") {
-
-    //   let firstcard= document.getElementsByClassName
-
-    //   document.onkeydown = (e) => {
-    //     console.log(e.target);
-    //   }
-    // document.onclick = (e) => {
-    //   // console.log(e.target);
-    //   sliderContainer.style.display = "block";
-    //   console.log(parseInt(e.target.parentElement.dataset.id));
-    //   const currIndex = slidesIds.indexOf(
-    //     parseInt(e.target.parentElement.dataset.id)
-    //   );
-//  sliderContainer.style.display = "block";
-//       showSlide(0);
-//     };
-    
-//     if (e.keyCode == "27") {
-//       sliderContainer.style.display = "none";
-//     } else {
-//       return;
-//     }
-//   })
- //console.log(slidesIds[0]);
-  //ouvrir le media à l'index 1
-  /*//////////////////////////////////////////////////////////////*/
 
   const showSlide = (index) => {
     // Display relevant media based on index

@@ -4,10 +4,10 @@
  
     const likesbox = document.querySelector(".likesBox");
     likesbox.innerHTML = `
-     <div class="boxLikes">
+     <div class="boxLikes aria-label="Nombre de likes par jour">
         <div class="mediaLikesBox">
-        <p class="numberLikesBox">${totalLikes}</p>
-        <i class="fas fa-heart heart-box" aria-label="likes" role="button"></i>
+        <p class="numberLikesBox"aria-labelledby="${totalLikes} likes total">${totalLikes}</p>
+        <i class="fas fa-heart heart-box"></i>
         </div>
          <div class="likeInfosMedia">
         <p class="price-like-box" aria-labelledby="Son taux journalier est de: ${dayPrice} Euros par jour ">${dayPrice} €/Jour</p>

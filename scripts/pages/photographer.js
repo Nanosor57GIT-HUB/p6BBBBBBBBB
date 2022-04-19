@@ -58,7 +58,7 @@ function displayPhotographerInfo(photographer) {
         </div>
         </div>
         <div class="portrait-container">
-        <img src=${picture} alt="${name}" class="portraitMedia">
+        <img src=${picture} aria-hidden="true" class="portraitMedia">
         </div>`;
 }
 

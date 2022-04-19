@@ -7,7 +7,7 @@ function photographerFactory(data) {
     const baseURL = "photographer.html";
     const url = `${baseURL}?photographer=${id}`;
     article.innerHTML = `<a href=${url} >
-        <img src=${picture} class="imageProfil" alt="">
+        <img src=${picture} class="imageProfil" alt="Voir le portfolio de ${name}">
         <h2 class="photographer-name-profil">${name}</h2>
       </a>
       <div class="profilInfos">

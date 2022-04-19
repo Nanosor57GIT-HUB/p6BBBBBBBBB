@@ -5,10 +5,10 @@ selectSort.innerHTML = `   <div class="works-sort">
           <p class="sort-title">Trier par</p>
         </div>
 
-        <div id="sort-wrapper">
-          <div class="sort-base">
+        <div id="sort-wrapper" >
+          <div class="sort-base" aria-label="Séléctionner votre tri">
             <button id="select-first-option" class="select-option">
-              <span id="select-first-option-text" data-filtre="Popularité" >Popularité</span>
+              <span id="select-first-option-text" data-filtre="Popularité">Popularité</span>
             </button>
             <span class="fas fa-chevron-up arrow-down-open" role='button'></span>
           </div>
