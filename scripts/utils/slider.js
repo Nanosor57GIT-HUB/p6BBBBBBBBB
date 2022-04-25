@@ -10,7 +10,9 @@ sliderContainer.innerHTML = `
    
    <div class="arrow-right-container" aria-label="cliquer pour voir l'image suivante">
      <div class="arrow-right"></div>
+     <div class="closeContainer">
      <div class="close-lightbox" aria-label="cliquer pour fermer">X</div>
+     </div>
    </div>
    
  </div>`;

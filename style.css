@@ -491,16 +491,19 @@ textarea {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  /* overflow: hidden;*/
   width: 80%;
+  min-width: 80%;
   height: 90%;
+  min-height: 90%;
   overflow: hidden;
 }
 
 .arrow-left-container,
 .arrow-right-container {
   display: flex;
+  flex-direction: column-reverse;
   width: 7vw;
+  height: 100%;
   background-color: transparent;
   align-items: center;
   justify-content: center;
@@ -508,7 +511,6 @@ textarea {
 
 .arrow-left,
 .arrow-right {
-  display: flex;
   width: 20px;
   height: 20px;
   border-left: solid 4px var(--clr-primary-1);
@@ -529,7 +531,9 @@ textarea {
   position: relative;
   display: flex;
   width: 100%;
+  max-width: 100%;
   height: 100%;
+  min-height: 100%;
   overflow: hidden;
 }
 
@@ -538,7 +542,9 @@ textarea {
   top: 60px;
   display: flex;
   width: 65%;
+  min-width: 65%;
   height: 640px;
+  min-height: 640px;
 }
 
 .slide-container {
@@ -572,12 +578,10 @@ textarea {
 }
 
 .close-lightbox {
-  display: flex;
   position: absolute;
-  color: var(--clr-primary-1);
-  top: 0px;
   top: 20px;
-  font-size: 40px;
+  color: var(--clr-primary-1);
+  font-size: 30px;
   font-weight: bold;
   line-height: 20px;
   height: 50px;

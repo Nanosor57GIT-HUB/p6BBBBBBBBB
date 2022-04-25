@@ -16,7 +16,6 @@
   </head>
 
   <header>
-
     <a href="index.html" class="logoLink" tabindex="4">
       <img
         src="./assets/logo/logo.png"
@@ -24,39 +23,33 @@
         alt="Logo de la société FishEye"
       />
     </a>
-
   </header>
 
   <body>
+    <main>
+      <div class="photograph-header"></div>
 
-<main>
+      <div class="selectBox"></div>
 
-    <div class="photograph-header"></div>
+      <div class="portfolio-section"></div>
 
-    <div class="selectBox"></div>
+      <div class="likesBox"></div>
 
-    <div class="portfolio-section"></div>
+      <div class="modal-form"></div>
 
-    <div class="likesBox"></div>
-
-    <div class="modal-form"></div>
-
-    <div class="slider-modal"></div>
-
-</main>
+      <div class="slider-modal"></div>
+    </main>
 
     <script src="./scripts/factories/media.js"></script>
 
-    <script src="./scripts/pages/photographer.js"></script>
-
-    <script src="./scripts/utils/selectbox.js"></script>  
+    <script src="./scripts/utils/selectbox.js"></script>
 
     <script src="./scripts/utils/likes.js"></script>
 
     <script src="./scripts/utils/slider.js"></script>
 
     <script src="./scripts/utils/form.js"></script>
-
+    //init toujours en dernier
+    <script src="./scripts/pages/photographer.js"></script>
   </body>
-  
 </html>
