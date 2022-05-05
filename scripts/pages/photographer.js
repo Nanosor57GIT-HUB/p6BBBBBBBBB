@@ -100,8 +100,6 @@ async function init() {
 
   formulaire(pathName);
 
-  likesInfos(totalLikes, dayPrice);
-
   enableLightboxListeners();
 }
 

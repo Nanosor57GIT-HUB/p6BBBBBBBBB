@@ -1,17 +1,18 @@
 
-const sliderContainer = document.querySelector(".slider-modal");
+const sliderContainer = document
+  .querySelector(".slider-modal")
 sliderContainer.innerHTML = `
  <div class="slider-container">
    <div class="arrow-left-container">
-     <div class="arrow-left" aria-label="cliquer pour voir l'image précédente"></div>
+     <div class="arrow-left" aria-label="cliquer pour voir l'image précédente" tabindex="0"></div>
    </div>
 
    <div class="slider-media-container"></div>
    
    <div class="arrow-right-container" aria-label="cliquer pour voir l'image suivante">
-     <div class="arrow-right"></div>
+     <div class="arrow-right"  tabindex="0"></div>
      <div class="closeContainer">
-     <div class="close-lightbox" aria-label="cliquer pour fermer">X</div>
+     <div class="close-lightbox" aria-label="cliquer pour fermer" tabindex="0">X</div>
      </div>
    </div>
    
@@ -40,21 +41,23 @@ const enableLightboxListeners = (portfolio) => {
   // Mettre une fonction forEach avec un eventlistener aux media
   mediaCardsList.forEach((mc) =>
     mc.addEventListener("click", (e) => {
-      // display Lightbox
-      sliderContainer.style.display = "block";
-    console.log(e.target.parentElement);
-
-      // Get current index of clicked media
-      //Récupérer l'index du media cliquer
       const currIndex = slidesIds.indexOf(
         parseInt(e.target.parentElement.dataset.id)
       );
+     
+       // display Lightbox
+      sliderContainer.style.display = "block";
+    console.log(e.target.parentElement);
+          
+      // Get current index of clicked media
+      //Récupérer l'index du media cliquer
+      
       console.log(currIndex); //ressort l'index du media clicked
 
       // Display selected media inside lightbox
       // Afficher le média sélectionné dans la lightbox
       showSlide(currIndex);
-
+        
       // Add event listener to Display previous media
       //Ajouter un écouteur d'événement pour afficher le média précédent
       prevBtn.addEventListener("click", (e) => {
@@ -71,7 +74,7 @@ const enableLightboxListeners = (portfolio) => {
         showSlide(parseInt(e.target.dataset.next));
         console.log(e.target.dataset.next);
       });
-      // console.log(nextBtn); //positionne le next sur l'index clicked(asc order 1...9-0)
+       console.log(nextBtn); //positionne le next sur l'index clicked(asc order 1...9-0)
 
       //Next/Previous arrow at click
       window.addEventListener("keydown", checkKeyPress, false);
@@ -82,7 +85,7 @@ const enableLightboxListeners = (portfolio) => {
         } else if (e.keyCode == "39") {
           nextBtn.click();
           console.log(window);
-        }
+        } 
       }
 
     })

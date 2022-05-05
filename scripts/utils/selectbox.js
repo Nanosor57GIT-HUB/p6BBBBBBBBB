@@ -123,6 +123,6 @@ function sortData(data, photographer, totalLikes, dayPrice) {
 
   tri(data);
   likesInfos(totalLikes, dayPrice);
-  enableLightboxListeners();
+  
 }
 
