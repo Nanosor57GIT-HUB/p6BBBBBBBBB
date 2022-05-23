@@ -16,29 +16,29 @@
   </head>
 
   <header>
-    <a href="index.html" class="logoLink" tabindex="4">
+    <a href="index.html" class="logoLink" tabindex="0" aria-label="Retourner à l'accueil">
       <img
         src="./assets/logo/logo.png"
         class="logoMediaFishEye"
-        alt="Logo de la société FishEye"
+        alt="Logo de la société FishEye" 
       />
     </a>
   </header>
 
   <body>
-    <main>
+    <main id="hidden" >
       <div class="photograph-header"></div>
 
       <div class="selectBox"></div>
 
-      <div class="portfolio-section"></div>
+      <div class="portfolio-section" aria-hidden="false"></div>
 
       <div class="likesBox"></div>
+</main>
+      <div class="modal-form" role="dialog" aria-hidden="false"></div>
 
-      <div class="modal-form"></div>
-
-      <div class="slider-modal"></div>
-    </main>
+      <div class="slider-modal" aria-hidden="true"></div>
+    
 
     <script src="./scripts/factories/media.js"></script>
 

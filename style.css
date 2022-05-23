@@ -254,19 +254,21 @@ article a:hover {
 }
 
 .formClose {
-  position: fixed;
+  position: absolute;
+  top: 30px;
   border: none;
   font-size: 3rem;
-  height: 60px;
-  margin-right: 15px;
-  margin-top: 10px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 20px;
   cursor: pointer;
   color: var(--clr-secondary-2);
   background-color: #11ffee00;
 }
 
-.photographersContactName p,
-h3 {
+.photographersContact p,
+h2 {
   font-size: 3rem;
   width: 95%;
   margin: 0;
@@ -337,6 +339,7 @@ textarea {
 
 .media-card-title {
   width: 83%;
+  letter-spacing: 1px;
 }
 
 .likesByMedia {
@@ -345,7 +348,7 @@ textarea {
   width: 17%;
 }
 
-#media-card-likes {
+.media-card-likes {
   display: flex;
   width: 90%;
   height: 25px;
@@ -456,7 +459,7 @@ textarea {
 .media-card-text {
   display: flex;
   justify-content: space-between;
-  padding: 0 25px;
+  
 }
 
 .media-card-likes,
@@ -481,7 +484,7 @@ textarea {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   z-index: 300;
 }
 
@@ -495,7 +498,7 @@ textarea {
   min-width: 80%;
   height: 90%;
   min-height: 90%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .arrow-left-container,
@@ -575,6 +578,10 @@ textarea {
   color: var(--clr-primary-1);
   display: flex;
   margin-top: 10px;
+  color: #312f2f;
+  font-size: 18px;
+  letter-spacing: 1px;
+  
 }
 
 .close-lightbox {

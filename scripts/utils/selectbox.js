@@ -6,17 +6,17 @@ selectSort.innerHTML = `   <div class="works-sort">
         </div>
 
         <div id="sort-wrapper" >
-          <div class="sort-base" aria-label="Séléctionner votre tri">
-            <button id="select-first-option" class="select-option">
-              <span id="select-first-option-text" data-filtre="Popularité">Popularité</span>
+          <div class="sort-base" >
+            <button id="select-first-option" class="select-option" aria-label="Section trier par: ">
+              <span id="select-first-option-text" data-filtre="Popularité" >Popularité</span>
             </button>
-            <span class="fas fa-chevron-up arrow-down-open" role='button'></span>
+            <span class="fas fa-chevron-up arrow-down-open"></span>
           </div>
 
           <div class="flex-block-button">
           <div id="select-block-options" role="listbox">
-            <button class="select-option date" data-filtre="Date">Date</button>
-            <button class="select-option titre" data-filtre="Titre">Titre</button>
+            <button class="select-option date" data-filtre="Date" >Date</button>
+            <button class="select-option titre" data-filtre="Titre" >Titre</button>
           </div>
           </div>
         </div>

@@ -7,14 +7,13 @@ async function getPhotographers() {
   });
 
   const data = await res.json();
-
+/*si les données sont inexistantes dans localStorage alors retourne les données
+ à l'interieur*/
   if (localStorage.getItem("data") == null) {
     localStorage.setItem("data", JSON.stringify(data));
   }
-
-  // Retourner le tableau photographers seulement une fois
   return {
-    //remplacer les données fetch par localstorage
+    //mettre les données fetch par localstorage
     photographers: JSON.parse(localStorage.getItem("data")).photographers,
 
     photographers: [...data.photographers],
@@ -28,7 +27,7 @@ async function displayData(photographers) {
     const photographerModel = photographerFactory(photographer);
     const userCardDOM = photographerModel.getUserCardDOM();
     photographersSection.appendChild(userCardDOM);
-    // console.log(photographersSection);
+  //   console.log(photographersSection);
   });
 }
 

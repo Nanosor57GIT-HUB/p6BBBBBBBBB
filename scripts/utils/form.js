@@ -1,36 +1,33 @@
-/*export*/ function formulaire(name, baseURL, id) {
-  const ModalForm = document.querySelector(".modal-form");
-  ModalForm.innerHTML = `<div class="windowContact">
+ function formulaire(name, baseURL, id) {
+   const ModalForm = document.querySelector(".modal-form");
+   ModalForm.innerHTML = `<div class="windowContact">
           <div class="modalContact">
-            <div class="closedContact">
-              <button class="formClose" tabindex="11">&times</button>
-            </div>
-
-            <div class="photographersContactName">
-              <p>Contactez-moi</p>
-              <h3>${name}</h3>
+            <div class="photographersContact">
+              <p aria-label="Contacter ${name}">Contactez-moi</p>
+              <h2 class="name-photographer-Contact">${name}</h2>
             </div>
 
             <form            
-              method="POST"
+              method="GET"
               action="${baseURL}?photographer=${id}"
               name="Me contacter"
               class="formClass"
-              id="formId"
-              type="submit"
+              id="formId"  
             >
               <div class="name divInputs">
                 <label for="prenom" class="prenom champ">Prénom</label>
                 <input
                   type="text"
-                  name="prenom"
+                  aria-label="Mettre votre Prénom"
+                  name="prenom" 
+                   autofocus                
                   placeholder="Votre Prénom"
                   id="prenom"
                   class="valid"
                   minlength="2"
-                  maxlength="30"
-                  aria-label="Mettre votre Prénom"
-                  tabindex="6"
+                  maxlength="30"                          
+                tabindex="0"
+                 required
                 />
               </div>
 
@@ -38,14 +35,15 @@
                 <label for="nom" class="nom champ">Nom</label>
                 <input
                   type="text"
-                  name="nom"
-                  placeholder="Votre Nom"
+                  aria-label="Mettre votre nom"
+                  name="nom"               
                   id="nom"
-                   class="valid"
+                  class="valid"
                   minlength="2"
                   maxlength="30"
-                  aria-label="Mettre votre nom"
-                  tabindex="7"
+                  placeholder="Votre Nom"
+                  tabindex="0"
+                  required
                 />
               </div>
 
@@ -53,60 +51,72 @@
                 <label for="email" class="email champ">Email</label>
                 <input
                   type="email"
+                  aria-label="Mettre votre Email"
                   name="email"
-                  placeholder="Exemple@contact.fr"
-                  id="email"
+                  id="email" 
                    class="valid"
                   minlength="10"
                   maxlength="60"
-                  aria-label="Mettre votre Email"
-                  tabindex="8"
+                  placeholder="Exemple@contact.fr"
+                  tabindex="0"
+                  required
                 />
               </div>
 
               <div class="message divInputs">
                 <label for="msg">Message :</label>
                 <textarea
+                aria-label="Ecrire votre message"
+                name="msg"
                   id="msg"
-                  class="valid"
-                  name="msg"
-                  placeholder="Ecrire votre message ..."
+                  class="valid"   
                   cols="50"
                   rows="8"
                   minlength="15"
-                  maxlength="400"
-                  aria-label="Ecrire votre message"
-                  tabindex="9">
+                  maxlength="400"      
+                  placeholder="Ecrire votre message ..."
+                  tabindex="0"
+                  />
                 </textarea>
               </div>
 
               <div class="submitForm-btn">
-                <input type="submit" aria-label="Envoyer votre message" class="btn-Envoyer" id
-                submit-btn value="Envoyer" tabindex="10"/>
+                <input type="submit" aria-label="Envoyer votre message" class="btn-Envoyer" id="
+                submit-btn" value="Envoyer" tabindex="0"/>
               </div>
+              <div class="closedContact">
+              <button type="button" class="formClose"  aria-label="Cliquez pour fermer" tabindex="0" aria-hidden="true">&times</button>
+            </div>
               
             </form>
           </div>
         </div>`;
 
-  //Open modal Formulaire by button "Contactez-moi"
-  const Modal = document.querySelector(".modal-form");
+   const Contactbtn = document.querySelector(".contact_button");
+   Contactbtn.onclick = () => {
+     ModalForm.style.display = "block";
+     document.getElementById("prenom").focus();
+   };
+   //Close modal formulaire by cross
+   const CloseModal = document.querySelector(".formClose");
+   CloseModal.onclick = (e) => {
+     ModalForm.style.display = "none";
+   };
 
-  const Contactbtn = document.querySelector(".contact_button");
-  Contactbtn.onclick = () => {
-    Modal.style.display = "block";
+   const form = document.getElementById("formId");
+    let firstName = document.querySelector("#prenom")
+    let lastName = document.querySelector("#nom");
+    let email = document.querySelector("#email");
 
-    //Close modal formulaire by cross
-    const CloseModal = document.querySelector(".formClose");
-    CloseModal.onclick = () => {
-      Modal.style.display = "none";
-    };
+   form.addEventListener("submit", (e) => {
+    e.preventDefault();
+     alert("Formulaire envoyé");
+     console.log(firstName.value);
+     console.log(lastName.value);
+     console.log(email.value);
+     ModalForm.style.display = "none";
+     
+   });
+   
+ }
 
-    //Close ModalFormulaire
-    const EnvoyerBtn = document.querySelector(".btn-Envoyer");
-    EnvoyerBtn.onclick = (e) => {
-      Modal.style.display = "none";
-      e.preventDefault();
-    };
-  };
-}
