@@ -84,11 +84,10 @@
                 <input type="submit" aria-label="Envoyer votre message" class="btn-Envoyer" id="
                 submit-btn" value="Envoyer" tabindex="0"/>
               </div>
-              <div class="closedContact">
+            </form>
+             <div class="closedContact">
               <button type="button" class="formClose"  aria-label="Cliquez pour fermer" tabindex="0" aria-hidden="true">&times</button>
             </div>
-              
-            </form>
           </div>
         </div>`;
 
@@ -96,12 +95,13 @@
    Contactbtn.onclick = () => {
      ModalForm.style.display = "block";
      document.getElementById("prenom").focus();
-   };
+  }; 
    //Close modal formulaire by cross
    const CloseModal = document.querySelector(".formClose");
    CloseModal.onclick = (e) => {
      ModalForm.style.display = "none";
-   };
+   }
+  
 
    const form = document.getElementById("formId");
     let firstName = document.querySelector("#prenom")

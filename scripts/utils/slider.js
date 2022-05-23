@@ -66,23 +66,23 @@ const enableLightboxListeners = (portfolio) => {
           showSlide(parseInt(e.target.dataset.next));
     //      console.log(e.target.dataset.next);
         });
-  window.addEventListener(
-    "keydown",
-    function (e) {
-      if (e.key == "Enter") {
-        sliderContainer.style.display = "block";
-        nextBtn.focus();
-      }
-      if (e.key == "Escape") {
-        sliderContainer.style.display = "none";
-      }
-    },
-    false
-  );
+  
         //addevent enter/escape
       }) //End mc.addEventListener
   ); //end mediaCardlist forEach
-
+window.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.key == "Enter") {
+      sliderContainer.style.display = "block";
+      nextBtn.focus();
+    }
+    if (e.key == "Escape") {
+      sliderContainer.style.display = "none";
+    }
+  },
+  false
+);
   //Ajout d'un écouteur d'événement pour le clavier
   window.addEventListener(
     "keydown",
